@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SalonPro — Gestion de salon</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="app">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="brand">
+        <div class="brand-mark">S</div>
+
+        <div>
+          <strong>Salon<span>Pro</span></strong>
+          <small>Gestion intelligente</small>
+        </div>
+      </div>
+
+      <div class="branch">
+        <span class="status-dot"></span>
+
+        <div>
+          <b>Salon Principal</b>
+          <small>Ouvert maintenant</small>
+        </div>
+
+        <span>⌄</span>
+      </div>
+
+      <nav>
+
+        <p class="nav-title">GESTION</p>
+
+        <a class="nav-link active" data-page="dashboard">
+          <i>⌂</i>
+          Dashboard
+        </a>
+
+        <a class="nav-link" data-page="clients">
+          <i>♙</i>
+          Clients
+        </a>
+
+        <a class="nav-link" data-page="appointments">
+          <i>◷</i>
+          Rendez-vous
+          <em>4</em>
+        </a>
+
+        <a class="nav-link" data-page="pos">
+          <i>▣</i>
+          Caisse
+        </a>
+
+        <a class="nav-link" data-page="shop">
+          <i>◇</i>
+          Boutique
+        </a>
+
+        <a class="nav-link" data-page="staff">
+          <i>♟</i>
+          Travailleurs
+        </a>
+
+        <a class="nav-link" data-page="commissions">
+          <i>%</i>
+          Commissions
+        </a>
+
+        <a class="nav-link" data-page="stock">
+          <i>▤</i>
+          Stock
+          <em class="danger">3</em>
+        </a>
+
+        <p class="nav-title">ANALYSE</p>
+
+        <a class="nav-link" data-page="reports">
+          <i>▥</i>
+          Rapports
+        </a>
+
+        <a class="nav-link" data-page="settings">
+          <i>⚙</i>
+          Paramètres
+        </a>
+
+      </nav>
+
+      <div class="sidebar-bottom">
+
+        <div class="support">
+          <span>?</span>
+
+          <div>
+            <b>Besoin d'aide ?</b>
+            <small>Centre d'assistance</small>
+          </div>
+        </div>
+
+        <div class="profile-mini">
+
+          <div class="avatar">
+            MC
+          </div>
+
+          <div>
+            <b>Marie Claire</b>
+            <small>Administratrice</small>
+          </div>
+
+          <span>•••</span>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+
+    <!-- CONTENU PRINCIPAL -->
+    <main class="main">
+
+      <header class="topbar">
+
+        <button class="mobile-menu" id="menuBtn">
+          ☰
+        </button>
+
+        <div class="breadcrumb">
+          Salon Principal
+          <span>/</span>
+          <b id="pageName">Dashboard</b>
+        </div>
+
+        <div class="top-actions">
+
+          <button class="icon-btn">
+            ⌕
+          </button>
+
+          <button class="icon-btn notif">
+            ♧
+            <i></i>
+          </button>
+
+          <div class="top-profile">
+
+            <div class="avatar small">
+              MC
+            </div>
+
+            <div>
+              <b>Marie Claire</b>
+              <small>Administratrice</small>
+            </div>
+
+            <span>⌄</span>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <section class="content">
+
+
+        <!-- DASHBOARD -->
+        <div id="page-dashboard" class="page active-page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                MARDI 29 SEPTEMBRE 2026
+              </p>
+
+              <h1>
+                Bonjour, 
+                <span>✦</span>
+              </h1>
+
+              <p class="muted">
+                Voici ce qui se passe dans votre salon aujourd'hui.
+              </p>
+
+            </div>
+
+            <button class="primary">
+              ＋ Nouvelle vente
+            </button>
+
+          </div>
+
+
+          <div class="stats-grid">
+
+            <div class="stat-card">
+
+              <div class="stat-icon rose">
+                
+              </div>
+
+              <div>
+
+                <span>
+                  Chiffre d'affaires
+                </span>
+
+                <h2>
+                  
+                </h2>
+
+                <small class="up">
+                  ↑ 12,8%
+                  <b>vs. mois dernier</b>
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <div class="stat-icon violet">
+                ◉
+              </div>
+
+              <div>
+
+                <span>
+                  Prestations
+                </span>
+
+                <h2>
+                  24
+                </h2>
+
+                <small class="up">
+                  ↑ 8,4%
+                  <b>vs. mois dernier</b>
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <div class="stat-icon gold">
+                ▣
+              </div>
+
+              <div>
+
+                <span>
+                  Ventes boutique
+                </span>
+
+                <h2>
+                  
+                </h2>
+
+                <small class="up">
+                  ↑ 5,2%
+                </small>
+
+              </div>
+
+            </div>
+
+
+            <div class="stat-card">
+
+              <div class="stat-icon green">
+                %
+              </div>
+
+              <div>
+
+                <span>
+                  Commissions
+                </span>
+
+                <h2>
+                  
+                </h2>
+
+                <small>
+                  40% des prestations
+                </small>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+          <div class="dashboard-grid">
+
+            <div class="panel">
+
+              <div class="panel-head">
+
+                <div>
+                  <h3>Performance financière</h3>
+                  <p>Évolution du chiffre d'affaires</p>
+                </div>
+
+                <select>
+                  <option>Cette semaine</option>
+                  <option>Ce mois</option>
+                  <option>Cette année</option>
+                </select>
+
+              </div>
+
+              <div class="chart">
+
+                <div class="chart-lines"></div>
+
+                <div class="chart-values">
+                  60k<br>
+                  45k<br>
+                  30k<br>
+                  15k<br>
+                  0
+                </div>
+
+                <svg viewBox="0 0 700 230">
+
+                  <path
+                    class="area"
+                    d="M0 185
+                    C70 165 75 125 145 140
+                    S215 75 280 105
+                    S350 145 420 85
+                    S485 70 555 105
+                    S625 45 700 65
+                    L700 230
+                    L0 230Z">
+                  </path>
+
+                  <path
+                    class="line"
+                    d="M0 185
+                    C70 165 75 125 145 140
+                    S215 75 280 105
+                    S350 145 420 85
+                    S485 70 555 105
+                    S625 45 700 65">
+                  </path>
+
+                </svg>
+
+              </div>
+
+            </div>
+
+
+            <div class="panel">
+
+              <div class="panel-head">
+
+                <div>
+                  <h3>Rendez-vous du jour</h3>
+                  <p>4 rendez-vous programmés</p>
+                </div>
+
+                <button class="text-btn">
+                  Voir tout →
+                </button>
+
+              </div>
+
+              <div class="appointment-list">
+
+                <div class="appt">
+
+                  <span class="time">
+                    09:00
+                  </span>
+
+                  <div class="appt-avatar">
+                    AM
+                  </div>
+
+                  <div class="appt-info">
+                    <b>Alice Mukamana</b>
+                    <small>Coupe femme</small>
+                  </div>
+
+                  <span class="pill done">
+                    Terminé
+                  </span>
+
+                </div>
+
+
+                <div class="appt">
+
+                  <span class="time">
+                    
+                  </span>
+
+                  <div class="appt-avatar">
+                    CU
+                  </div>
+
+                  <div class="appt-info">
+                    <b></b>
+                    <small></small>
+                  </div>
+
+                  <span class="pill progress">
+                    En cours
+                  </span>
+
+                </div>
+
+
+                <div class="appt">
+
+                  <span class="time">
+                    13:00
+                  </span>
+
+                  <div class="appt-avatar">
+                    DI
+                  </div>
+
+                  <div class="appt-info">
+                    <b></b>
+                    <small>Tresses</small>
+                  </div>
+
+                  <span class="pill wait">
+                    Confirmé
+                  </span>
+
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- CLIENTS -->
+        <div id="page-clients" class="page">
+
+          <div class="page-head">
+
+            <div>
+              <p class="eyebrow">
+                RELATION CLIENT
+              </p>
+
+              <h1>
+                Clients
+              </h1>
+
+              <p class="muted">
+                Retrouvez rapidement un client par son nom ou son numéro.
+              </p>
+            </div>
+
+            <button class="primary" onclick="addClient()">
+              ＋ Nouveau client
+            </button>
+
+          </div>
+
+
+          <div class="toolbar">
+
+            <div class="search">
+
+              <span>⌕</span>
+
+              <input
+                id="clientSearch"
+                placeholder="Rechercher par nom ou téléphone..."
+              >
+
+            </div>
+
+          </div>
+
+
+          <div class="panel table-panel">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>CLIENT</th>
+                  <th>TÉLÉPHONE</th>
+                  <th>DERNIÈRE VISITE</th>
+                  <th>VISITES</th>
+                  <th>DÉPENSÉ</th>
+                  <th>FIDÉLITÉ</th>
+                </tr>
+
+              </thead>
+
+              <tbody id="clientsTable">
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
+        <!-- CAISSE -->
+        <div id="page-pos" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                POINT DE VENTE
+              </p>
+
+              <h1>
+                Caisse
+              </h1>
+
+              <p class="muted">
+                Prestations et produits dans une seule transaction.
+              </p>
+
+            </div>
+
+            <div class="cash-summary">
+
+              <span>
+                Total panier
+              </span>
+
+              <strong id="cartTotal">
+                 0
+              </strong>
+
+            </div>
+
+          </div>
+
+
+          <div class="pos-grid">
+
+            <div class="panel products-panel">
+
+              <div class="tabs">
+
+                <button
+                  class="tab active"
+                  onclick="showServices()">
+                  Prestations
+                </button>
+
+                <button
+                  class="tab"
+                  onclick="showProducts()">
+                  Produits
+                </button>
+
+              </div>
+
+              <div
+                class="pos-items"
+                id="posItems">
+              </div>
+
+            </div>
+
+
+            <div class="panel cart-panel">
+
+              <div class="panel-head">
+
+                <div>
+
+                  <h3>
+                    Panier
+                  </h3>
+
+                  <p>
+                    Client non sélectionné
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              <div
+                class="cart-items"
+                id="cartItems">
+
+                <div class="empty">
+                  Votre panier est vide
+                </div>
+
+              </div>
+
+
+              <div class="cart-total">
+
+                <div>
+                  <span>Sous-total</span>
+                  <b id="subtotal">₣ 0</b>
+                </div>
+
+                <div class="grand">
+                  <span>Total</span>
+                  <strong id="grandTotal">
+                    ₣ 0
+                  </strong>
+                </div>
+
+                <button
+                  class="primary full"
+                  onclick="pay()">
+                  Encaisser
+                </button>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- BOUTIQUE -->
+        <div id="page-shop" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                BOUTIQUE
+              </p>
+
+              <h1>
+                Produits
+              </h1>
+
+              <p class="muted">
+                Gérez votre catalogue et vos ventes produits.
+              </p>
+
+            </div>
+
+            <button class="primary">
+              ＋ Ajouter un produit
+            </button>
+
+          </div>
+
+          <div
+            class="shop-grid"
+            id="shopGrid">
+          </div>
+
+        </div>
+
+
+        <!-- TRAVAILLEURS -->
+        <div id="page-staff" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                ÉQUIPE
+              </p>
+
+              <h1>
+                Travailleurs
+              </h1>
+
+              <p class="muted">
+                Gestion des travailleurs et de leurs performances.
+              </p>
+
+            </div>
+
+            <button class="primary">
+              ＋ Ajouter un travailleur
+            </button>
+
+          </div>
+
+          <div
+            class="staff-grid"
+            id="staffGrid">
+          </div>
+
+        </div>
+
+
+        <!-- COMMISSIONS -->
+        <div id="page-commissions" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                RÉMUNÉRATION
+              </p>
+
+              <h1>
+                Commissions
+              </h1>
+
+              <p class="muted">
+                Commission uniquement sur les prestations.
+              </p>
+
+            </div>
+
+            <div class="commission-rule">
+
+              <b>40%</b>
+              travailleur
+
+              <span>/</span>
+
+              <b>60%</b>
+              patronne
+
+            </div>
+
+          </div>
+
+
+          <div class="commission-cards">
+
+            <div class="panel big-number">
+
+              <span>
+                Commission générée
+              </span>
+
+              <strong>
+                00
+              </strong>
+
+              <small>
+                Ce mois
+              </small>
+
+            </div>
+
+
+            <div class="panel big-number">
+
+              <span>
+                Déjà payée
+              </span>
+
+              <strong>
+                00
+              </strong>
+
+              <small>
+                0,00% du total
+              </small>
+
+            </div>
+
+
+            <div class="panel big-number">
+debug 
+              <span>
+                Reste à payer
+              </span>
+
+              <strong>
+                ₣ 23 080
+              </strong>
+
+              <small>
+                À régulariser
+              </small>
+
+            </div>
+
+          </div>
+
+
+          <div class="panel table-panel">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>TRAVAILLEUR</th>
+                  <th>PRESTATIONS</th>
+                  <th>CA PRESTATIONS</th>
+                  <th>TAUX</th>
+                  <th>COMMISSION</th>
+                  <th>RESTE</th>
+                </tr>
+
+              </thead>
+
+              <tbody id="commissionTable">
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
+        <!-- STOCK -->
+        <div id="page-stock" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                INVENTAIRE
+              </p>
+
+              <h1>
+                Stock
+              </h1>
+
+              <p class="muted">
+                Suivez les entrées et sorties de stock.
+              </p>
+
+            </div>
+
+            <button class="primary">
+              ＋ Entrée de stock
+            </button>
+
+          </div>
+
+
+          <div class="panel table-panel">
+
+            <table>
+
+              <thead>
+
+                <tr>
+                  <th>PRODUIT</th>
+                  <th>RÉFÉRENCE</th>
+                  <th>STOCK</th>
+                  <th>SEUIL</th>
+                  <th>PRIX</th>
+                  <th>STATUT</th>
+                </tr>
+
+              </thead>
+
+              <tbody id="stockTable">
+              </tbody>
+
+            </table>
+
+          </div>
+
+        </div>
+
+
+        <!-- RAPPORTS -->
+        <div id="page-reports" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                ANALYSE
+              </p>
+
+              <h1>
+                Rapports
+              </h1>
+
+              <p class="muted">
+                Analyse financière du salon.
+              </p>
+
+            </div>
+
+          </div>
+
+
+          <div class="report-grid">
+
+            <div class="panel report-card">
+
+              <span>
+                CA prestations
+              </span>
+
+              <strong>debug 
+                00
+              </strong>
+
+              <div class="bar">
+                <i style="width:78%"></i>
+              </div>
+
+            </div>
+
+
+            <div class="panel report-card">
+
+              <span>
+                CA boutique
+              </span>
+
+              <strong>
+                 oo
+              </strong>
+
+              <div class="bar">
+                <i style="width:41%"></i>
+              </div>
+
+            </div>
+
+
+            <div class="panel report-card">
+
+              <span>
+                Commissions
+              </span>
+
+              <strong>
+                00
+              </strong>
+
+              <div class="bar">
+                <i style="width:40%"></i>
+              </div>
+
+            </div>
+
+
+            <div class="panel report-card">
+
+              <span>
+                Dépenses
+              </span>
+
+              <strong>
+                00
+              </strong>
+
+              <div class="bar">
+                <i style="width:18%"></i>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <!-- PARAMETRES -->
+        <div id="page-settings" class="page">
+
+          <div class="page-head">
+
+            <div>
+
+              <p class="eyebrow">
+                CONFIGURATION
+              </p>
+
+              <h1>
+                Paramètres
+              </h1>
+
+              <p class="muted">
+                Configurez les règles du salon.
+              </p>
+
+            </div>
+
+            <button
+              class="primary"
+              onclick="saveSettings()">
+              Enregistrer
+            </button>
+
+          </div>
+
+
+          <div class="panel settings-content">
+
+            <h3>
+              Règles de commission
+            </h3>
+
+            <p class="muted">
+              La commission est appliquée uniquement aux prestations.
+            </p>
+
+
+            <div class="rule-box">
+
+              <label>
+
+                Part du travailleur
+
+                <output id="workerPct">
+                  40%
+                </output>
+
+              </label>
+
+              <input
+                id="commissionRange"
+                type="range"
+                min="0"
+                max="100"
+                value="40"
+              >
+
+              <div class="split-labels">
+
+                <span>
+                  Travailleur
+                </span>
+
+                <span>
+                  Patronne
+                  <b id="ownerPct">
+                    60%
+                  </b>
+                </span>
+
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+    </main>
+
+  </div>
+
+
+  <script src="app.js"></script>
+
+</body>
+</html>
